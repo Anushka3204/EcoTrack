@@ -1,0 +1,67 @@
+#question-div{
+    padding: 2.5rem;
+    border: 0.1rem solid grey;
+    border-radius: 2%;
+    width: 80%;
+    margin: 3rem;   
+    height: 25rem;
+    overflow-y: auto;
+    
+}
+.container{
+    width: 75%;
+}
+
+/* body{
+display: flex;
+justify-content: center;
+align-items: center;
+
+} */
+
+.btn-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#pointsMeter{
+    width: 50rem;
+    margin: 2rem;
+}
+
+.bottom-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+  .circular-progress{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(rgb(151, 241, 5) 3.6deg, #ededed 0deg); 
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 13);
+}
+.progress-value{
+    position: relative;
+
+}
+
+.result-box{
+    position: absolute;
+    margin: 2rem;
+}
