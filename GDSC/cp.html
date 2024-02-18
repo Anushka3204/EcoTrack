@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carbon Footprint Balancing</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0e2304;
+        background-image: url(bg2.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+
+    .main{
+        display: flex;
+        background-color: none;
+        width:100%;
+        height: 100px;
+        text-align: center;
+        margin-top: 50px;
+        font-size:90px;
+        color:#fff;
+        margin-left: 100px;
+    }
+
+    .main-img{
+        margin-top: 80px;
+        width: 120px;
+        height: 140px; 
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        padding: 10px;
+        max-width: 1600px;
+        margin: 250px auto;
+       
+    }
+
+    .grid-item {
+        position: relative;
+        background-color: #3f7221;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 350px;
+        transition: all 0.3s ease;
+        opacity: 90%;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+       }
+
+    .grid-item img {
+        display: block;
+        width: 100%;
+        height: 80%;
+        align-content: center;
+        transition: all 0.3s ease;
+        opacity: 1;
+    }
+
+    .grid-item:hover {
+        transform: scale(1.1);
+        border-radius: 50%;
+        opacity: 80%;
+    }
+
+    .grid-item:hover img {
+        position: absolute;
+        width: 0;
+       
+    }
+
+    .grid-item .content {
+        position: absolute;
+        font-size: 18px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .grid-item:hover .content {
+        opacity: 100;
+    }
+
+    .container{
+        text-align: center;
+        font-size:25px;
+        font-weight: bolder;
+        color: white;
+        
+    }
+
+</style>
+</head>
+<body>
+<div class="main">
+    <img src="greenfootprints.jpg.png" class="main-img">
+    <p> Start your journey towards a sustainable Earth!!</p>
+</div>
+<div class="grid">
+    <div class="grid-item">
+        <img src="energy.jpg" alt="Image">
+        <div class="container">
+            <p>1</p>
+          </div>
+        <div class="content">
+            <h3>Reduce Energy Consumption</h3>
+            <p>Turn off lights when not in use, unplug electronics, use energy-efficient appliances.</p>
+        </div>
+    </div>
+   
+    <div class="grid-item">
+        <img src="publictransport.jpg" alt="Image">
+        <div class="container">
+            <p>2</p>
+          </div>
+        <div class="content">
+            <h3>Use Public Transportation</h3>
+            <p>Opt for buses, trains, or carpooling instead of driving alone.</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="tree.jpg" alt="Image">
+        <div class="container">
+            <p>3</p>
+          </div>
+        <div class="content">
+            <h3>Plant Trees</h3>
+            <p>Participate in tree planting events or create your own green space.</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="water.jpg" alt="Image">
+        <div class="container">
+            <p>4</p>
+          </div>
+        <div class="content">
+            <h3>Conserve Water</h3>
+            <p>Conserve water by fixing leaks, taking shorter showers, installing water-saving devices, and using water-efficient appliances.</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="3R.jpg" alt="Image">
+        <div class="container">
+            <p>5</p>
+          </div>
+        <div class="content">
+            <h3>Reduce, Reuse, Recycle</h3>
+            <p>Minimize waste by buying products with minimal packaging, reusing items when possible, and recycling materials like paper, glass, plastic, and metal.</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="renewable.png" alt="Image">
+        <div class="container">
+            <p>6</p>
+          </div>
+        <div class="content">
+            <h3>Renewable Energy Sources</h3>
+            <p>Transitioning to renewable energy sources such as solar, wind, or hydroelectric power.</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="plant.jpg" alt="Image">
+        <div class="container">
+            <p>7</p>
+          </div>
+        <div class="content">
+            <h3>Eat a Plant-Based Diet</h3>
+            <p>Reduce your carbon footprint by consuming less meat and dairy products</p>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="sustainable.jpg" alt="Image">
+        <div class="container">
+            <p>8</p>
+          </div>
+        <div class="content">
+            <h3>Support Sustainable Brands</h3>
+            <p>Choose products and services from companies that prioritize sustainability and environmental responsibility.</p>
+        </div>
+    </div>
+    <!-- Repeat this div for other items -->
+</div>
+
+</body>
+</html>
