@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+
+body {
+            /* background-image: url("1.webp"); Replace 'path_to_your_image.jpg' with the actual path to your image */
+            background-color: rgb(255, 255, 255);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Add any additional styles as needed */
+        }
+
+
+        .main-div > div {
+            display: inline-block;
+            width: 700px;
+            max-width: 800px;
+           
+            margin: 20px;
+            color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 5px #aaaaaa;
+            border: 2px solid green;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        .div1,
+        .div2,
+        .div3 {
+            height: 15px;
+            color: aliceblue;
+            width: 25px;
+            display: inline-block;
+            margin: 0px;
+        }
+
+        span {
+            margin-bottom: 10px;
+        }
+
+        .div1 {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .div2 {
+            background-color: green;
+        }
+
+        .div3 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div>
+            <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div>
+            <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div>
+            <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div>
+            <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </div>
+
+    <script>
+        var xValues = ["Europe", "United States", "China", "India", "Rest of the World"];
+        var yValues = [32, 24, 27, 17, 4];
+        var barColors = "green";
+
+        new Chart("myChart1", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Share of Cummulative CO2 Emissions by Geographic Region- 1850-2017"
+                }
+            }
+        });
+
+        var xValues = ["Electricity and Heat Production", "Agriculture, Forestry and other land use ", "Buildings", "Transportation", "Industry", "Other Energy"];
+        var yValues = [25, 24, 6, 14, 21, 10];
+        var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+        new Chart("myChart2", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Global Greenhouse Gas Emissions By Economic Sector"
+                }
+            }
+        });
+
+        var xValues = [1950, 1975, 2000, 2025, 2050, 2075, 2100];
+        var yValues = [0.2, 0.1, 0.8, 1.3, 2, 2.9, 4];
+
+        new Chart("myChart3", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                scales: {
+                    yAxes: [{ ticks: { min: 0, max: 6 } }],
+                },
+                title: {
+                    display: true,
+                    text: "Future Temperatures"
+                }
+            }
+        });
+
+        function updateChart(score) {
+            var ctx = document.getElementById('myChart4').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Average Eco-Score'],
+                    datasets: [{
+                        label: 'Average Eco-Score',
+                        data: [score],
+                        backgroundColor: 'purple'
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        // Example usage
+        //updateChart(50); // Pass the eco-score as the argument
+
+        // Update chart with the calculated ecoscore from the JavaScript code
+        let totalPoints = 53; // Example total points calculation
+        updateChart(totalPoints);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        font-family: 'Microsoft YaHei UI Light', sans-serif;
+        margin: 0;
+        padding: 0;
+        /* Updated background with opacity */
+        background :url("t1.webp") no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120vh; /* Increased height */
+        /* Decreased opacity */
+        opacity: 0.9;
+    }
+
+    .login-container {
+        background-color: rgba(255, 255, 255, 0.6); /* Adjusted opacity */
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+        padding: 30px;
+        width: 90%;
+        max-width: 800px; /* Increased max-width */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        position: relative; /* Relative position for pseudo-element */
+    }
+
+    
+
+    .form-container {
+        width: 70%;
+        padding-left: 20px; /* Add some space between image and form */
+        text-align: center; /* Center align the form fields */
+    }
+
+    .login-container form {
+        margin-top: 20px;
+        width: 100%; /* Make the form fill its container */
+    }
+
+    .login-container h3 {
+        margin-bottom: 20px;
+        color: #02380e; /* Changed color to green */
+        font-size: 24px; /* Increased font size */
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #02380e;
+        color: #fff;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    .login-container input[type="submit"]:hover {
+        background-color: #02380e;
+    }
+
+    .show-password {
+        margin-bottom: 13px;
+        font-family: 'Microsoft YaHei UI Light', sans-serif; /* Match the font */
+    }
+</style>
+</head>
+<body>
+<div class="login-container">
+    <div class="form-container">
+        <h3>Login</h3> <!-- Updated heading -->
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Enter username" required>
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            <input type="checkbox" id="showPassword" class="show-password" onclick="togglePassword()"> <!-- Added onclick event -->
+            <label for="showPassword">Show Password</label><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    var passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+}
+</script>
+</body>
+</html>

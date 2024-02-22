@@ -1,67 +1,457 @@
-#question-div{
-    padding: 2.5rem;
-    border: 0.1rem solid grey;
-    border-radius: 2%;
-    width: 80%;
-    margin: 3rem;   
-    height: 25rem;
-    overflow-y: auto;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* Navigation Bar */
+#navbar{
+    display:flex;
+    align-items:center;
+
+
+
+}
+/* Logo and image */
+
+
+
+#logo img{
+
+    height: 50px;
+    margin: 3px 7px;
+    /* z-index: 2; */
+  
+}
+
+
+
+
+
+/* navbar list sytling */
+#navbar{
+    position: relative;
+}
+
+#navbar ul{
+    display:flex;
+
+}
+
+ #navbar::before{
+    content:"";
+    background-color:#02380e ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    /* opacity: 0.4; */
+
+} 
+#navbar ul li{
+  list-style: none;
+    font-size: 1.2rem;
+    padding: 3px 30px;
+    display:block;
+    border-radius: 20px;
+    text-decoration: none;
+    z-index: 1;
     
 }
-.container{
-    width: 75%;
+
+
+#navbar ul li a{
+    display:block;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+
 }
 
-/* body{
-display: flex;
-justify-content: center;
-align-items: center;
-
-} */
-
-.btn-div{
-    display: flex;
-    justify-content: space-between;
+#navbar ul li a:hover{
+   color: rgb(12, 21, 16);
+   background-color: white;
+   border-radius: 7px;
 }
 
-
-#pointsMeter{
-    width: 50rem;
-    margin: 2rem;
-}
-
-.bottom-center {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-
-  .circular-progress{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    margin: 5rem;
-    display: flex;
-    align-items: center;
+/* home section */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding: 3px 200px;
     justify-content: center;
-    background: conic-gradient(rgb(151, 241, 5) 3.6deg, #ededed 0deg); 
+    height: 700px;
+    align-items: center;
+ 
+
+
 }
-.circular-progress::before{
+
+#btn p{
+    font-size: 10px;
+}
+
+
+#home p{
+    font-weight: bold;
+}
+
+
+
+
+#home::before{
+    content:"";
+    background :url("t2.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.66;
+
+} 
+
+a {
+    text-decoration: none; /* Remove underline */
+}
+
+.h-primary center{
+    padding-top: 10px;
+}
+
+/* Utility class */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 35px;
+   color: #02380e;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+    color: #02380e;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+    .h-secondary{
+        font-size: 2.2rem;
+        padding: 12px;
+        color: #02380e;
+        font-family: 'Arvo', serif;
+        font-family: 'Signika', sans-serif;
+        color: #02380e;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home .primary{
+    color: #02380e;
+   font-size: 75px;
+    }
+
+.primary{
+    font-size: 3.8rem;
+    color: #02380e;
+    padding: 15px;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+    color: #02380e;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Arvo', serif;
+font-family: 'Signika', sans-serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    color: #02380e;
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;
+    font-style: bold;
+font-family: 'Signika', sans-serif;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:#02380e;
+    color: white;
+    margin: 13px;
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.btn:hover{
+    background-color:#65dd50;
+    /* color: #680a0a;
+    border: 2px solid #680a0a; */
+}
+
+/* Services section */
+#services{
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* background: url('C:\\Users\\Admin\\Desktop\\All Web develpment\\Ecotrack\\t1.webp')no-repeat center center/cover;
+     width: 100%;
+     height: 4411%;
+     opacity: ; */
+}  
+
+
+
+#services .box {
+
+    border: 2.2px solid#02380e;;
+    padding: -31px;
+    width: 769px;
+    height: 345px;
+    margin: 20px;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: rgba(10, 135, 45, 0.164);
+    font-weight: bold;
+
+
+   }
+
+
+
+
+
+
+
+#services .box img{
+
+ height:160px;
+ margin:auto;
+ display: block;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.center{
+    justify-content: center;
+ align-items: center;
+ padding: 16px 16px;
+}
+
+
+/* Client section */
+
+
+
+#client{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    height: 40px;
+}
+
+#client img{
+    height: 140px;
+    /* width: 100px; */
+  
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+.pc{
+    
+    font-size: 2.8rem;
+     padding: 35px; 
+   color:#02380e;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:26px;
+}
+
+
+.client-item{
+    height:110px;
+    padding: 37px;
+}
+
+.content-box{
+
+}
+ #client-section::before{
     content: "";
     position: absolute;
-    height: 210px;
-    width: 210px;
-    border-radius: 50%;
-    background-color: rgb(0, 255, 13);
+    background :url("t1.webp") no-repeat center center/cover;
+    width: 98%;
+    height: 252%;
+    padding: 0px 0px ;
+    z-index: -1;
+    opacity: 0.7; 
+} 
+#client-section{
+    position: relative;
 }
-.progress-value{
+ .h-pri{
+   
+    font-size: 2.8rem;
+    padding-top: 130px;
+   color:  #02380e;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+     justify-content: center;
+    align-items: center; 
+    text-align:center;
+} 
+
+
+/* Contact section */
+.h-prim{
+   
+    font-size: 2.8rem;
+    padding-top: 100px;
+   color:#02380e;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+     justify-content: center;
+    align-items: center; 
+    text-align: center;
+} 
+
+
+
+#contact{
     position: relative;
 
+
+}
+  #contact::before{
+    content: "";
+       position: absolute; 
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.3;
+      /* background: url('../contact4.webp')no-repeat center center/cover; */
+
+}  
+
+footer{
+    background :#02380e;
+    color: rgb(211, 208, 208);
+    font-size: 20 px;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding-bottom: 34px;
+
+}
+#contact-box form{
+    width:40%;
+    height:40%
+}
+#contact-box label{
+    font-size: 1.3em;
+    color:#02380e;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
 }
 
-.result-box{
-    position: absolute;
-    margin: 2rem;
+.form-group button{
+    padding: 4px 10px;
+    border: 2px solid white;
+    background-color:#02380e;
+    color: white;
+    margin: 13px;
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;
+    font-family: 'Signika', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
 }
+
+.alert{
+
+
+    
+        
+        width: 100%;
+        
+        
+        
+        background-color: #65dd50;
+        
+        
+        
+        padding: 10px 20px;
+        
+    
+        
+        
+        
+        border-radius: 5px;
+        
+    
+        
+        text-align: center;
+        
+    
+        
+        font-size: 18px;
+        
+    
+        
+        font-weight: 900;
+        
+        
+        display: none;
+        
+    
+        
+        }
+       
+       
+      /* CSS for clickable boxes with a "pop" effect */
+.box {
+    cursor: pointer;
+    transition: transform 0.4s ease; /* Add transition for smooth animation */
+  }
+  
+  .box:hover {
+    transform: scale(1.05); /* Scale the box slightly larger on hover */
+  }
+  
