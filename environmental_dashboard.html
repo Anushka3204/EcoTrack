@@ -7,11 +7,24 @@
     <title>Environmental Dashboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
-        .main-div >div {
+
+body {
+            /* background-image: url("1.webp"); Replace 'path_to_your_image.jpg' with the actual path to your image */
+            background-color: rgb(255, 255, 255);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Add any additional styles as needed */
+        }
+
+
+        .main-div > div {
             display: inline-block;
             width: 700px;
             max-width: 800px;
+           
             margin: 20px;
+            color: rgb(255, 255, 255);
             box-shadow: 5px 5px 5px #aaaaaa;
             border: 2px solid green;
             padding: 2px;
@@ -22,16 +35,18 @@
         .div2,
         .div3 {
             height: 15px;
+            color: aliceblue;
             width: 25px;
             display: inline-block;
             margin: 0px;
         }
-        span{
+
+        span {
             margin-bottom: 10px;
         }
 
         .div1 {
-            background-color: red;
+            background-color: rgb(255, 255, 255);
         }
 
         .div2 {
@@ -55,12 +70,13 @@
         <div>
             <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
         </div>
-        
+        <div>
+            <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+        </div>
     </div>
 
-
     <script>
-        var xValues = ["Erope", "United States", "China", "India", "Rest of the World"];
+        var xValues = ["Europe", "United States", "China", "India", "Rest of the World"];
         var yValues = [32, 24, 27, 17, 4];
         var barColors = "green";
 
@@ -81,8 +97,6 @@
                 }
             }
         });
-
-
 
         var xValues = ["Electricity and Heat Production", "Agriculture, Forestry and other land use ", "Buildings", "Transportation", "Industry", "Other Energy"];
         var yValues = [25, 24, 6, 14, 21, 10];
@@ -111,7 +125,7 @@
             }
         });
 
-        var xValues = [1950,1975,2000,2025, 2050,2075, 2100];
+        var xValues = [1950, 1975, 2000, 2025, 2050, 2075, 2100];
         var yValues = [0.2, 0.1, 0.8, 1.3, 2, 2.9, 4];
 
         new Chart("myChart3", {
@@ -129,7 +143,7 @@
             options: {
                 legend: { display: false },
                 scales: {
-                    yAxes: [{ ticks: { min:0, max:6 } }],
+                    yAxes: [{ ticks: { min: 0, max: 6 } }],
                 },
                 title: {
                     display: true,
@@ -138,7 +152,36 @@
             }
         });
 
-        
+        function updateChart(score) {
+            var ctx = document.getElementById('myChart4').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Average Eco-Score'],
+                    datasets: [{
+                        label: 'Average Eco-Score',
+                        data: [score],
+                        backgroundColor: 'purple'
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        // Example usage
+        //updateChart(50); // Pass the eco-score as the argument
+
+        // Update chart with the calculated ecoscore from the JavaScript code
+        let totalPoints = 53; // Example total points calculation
+        updateChart(totalPoints);
     </script>
 
 </body>
