@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -16,8 +16,8 @@ f<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Signika+Negative&family=Signika:wght@300;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" media="screen and (max-width:1170px)" href="css/phone.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="phone.css" />
     <style>
         #client-section {
             padding: 20px;
@@ -58,17 +58,20 @@ f<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <nav id="navbar">
-        <div id="logo">
-            <img src="logo.png" alt="EcoTrack.com" />
-        </div>
-        <ul>
-            <li class="item"><a href="#home">Home</a></li>
-            <li class="item"><a href="#client-section">About Us</a></li>
-            <li class="item"><a href="#services">Explore</a></li>
-            <li class="item"><a href="#Contact Us">Feedback</a></li>
-        </ul>
-    </nav>
+<nav id="navbar">
+    <ul class="nav-links">
+        <li class="item"><a href="#home">Home</a></li>
+        <li class="item"><a href="#client-section">About Us</a></li>
+        <li class="item"><a href="#services">Explore</a></li>
+        <li class="item"><a href="#blog">Blog</a></li> <!-- New Blog tab -->
+        <li class="item"><a href="#Contact Us">Feedback</a></li>
+    </ul>
+    <div class="nav-actions">
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+</nav>
+
+
 
     <section id="home">
         <h1 class="primary">Welcome To EcoTrack</h1>
