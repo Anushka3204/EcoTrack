@@ -6,76 +6,66 @@
 
 
 /* Navigation Bar */
-#navbar{
-    display:flex;
-    align-items:center;
-
-
-
+/* Navbar styling */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02380e; /* Dark green background */
+    padding: 25px 30px;
+    position: sticky;
+    top: 10;
+    z-index: 500;
 }
+
+/* Logo */
+#logo img {
+    height: 50px;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+   
+}
+
+.nav-links li a:hover {
+    background-color: white;
+    color: #02380e;
+    border-radius: 5px;
+}
+
+/* Login button */
+.nav-actions .login-btn {
+    padding: 8px 16px;
+    background-color: #dfeced;
+    color: rgb(21, 1, 1);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.nav-actions .login-btn:hover {
+    background-color: #afdde5;
+    color: #02380e;
+}
+
 /* Logo and image */
 
 
 
-#logo img{
-
-    height: 50px;
-    margin: 3px 7px;
-    /* z-index: 2; */
-  
-}
-
-
-
-
-
-/* navbar list sytling */
-#navbar{
-    position: relative;
-}
-
-#navbar ul{
-    display:flex;
-
-}
-
- #navbar::before{
-    content:"";
-    background-color:#02380e ;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    /* opacity: 0.4; */
-
-} 
-#navbar ul li{
-  list-style: none;
-    font-size: 1.2rem;
-    padding: 3px 30px;
-    display:block;
-    border-radius: 20px;
-    text-decoration: none;
-    z-index: 1;
-    
-}
-
-
-#navbar ul li a{
-    display:block;
-    color: white;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Arvo', serif;
-    font-family: 'Signika', sans-serif;
-
-}
-
-#navbar ul li a:hover{
-   color: rgb(12, 21, 16);
-   background-color: white;
-   border-radius: 7px;
-}
 
 /* home section */
 #home{
